@@ -33,24 +33,13 @@ public class MainActivity extends AppCompatActivity {
                 String email = edEmail.getText().toString();
                 String senha = edSenha.getText().toString();
 
-                if(email.trim().equals("")||
-                        !Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-                    edEmail.setError("Preencha.");
-                    edEmail.requestFocus();
+                if(logar()){
+                    Intent i = new Intent(
+                            MainActivity.this,
+                            MainActivity2.class
+                    );
+                    startActivity(i);
                 }
-                if(senha.trim().equals("")){
-                    edSenha.setError("Preencha.");
-                    edSenha.requestFocus();
-                }
-
-                Intent i = new Intent(
-                        MainActivity.this,
-                        MainActivity2.class
-                );
-
-                startActivity(i);
-
-
 
                 Toast.makeText(getApplicationContext(),
                         "O e-mail digitado foi: " + email +
@@ -60,6 +49,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private boolean logar() {
+        if(edEmail.getText().toString().trim().equals("")||
+                !Patterns.EMAIL_ADDRESS.matcher(edEmail.getText().toString()).matches()){
+            edEmail.setError("Preencha.");
+            edEmail.requestFocus();
+            return false;
+        }
+        if(edSenha.getText().toString().trim().equals("")){
+            edSenha.setError("Preencha.");
+            edSenha.requestFocus();
+            return false;
+        }
+        return true;
     }
 
 }
