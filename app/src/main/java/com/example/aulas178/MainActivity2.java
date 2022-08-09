@@ -85,7 +85,7 @@ public class MainActivity2 extends AppCompatActivity {
         //percorre array de cópia com todos os itens e busca
         for(String item: arrayListItensCopia){
             if(item.toLowerCase().contains(s)){
-                //se item encontrado, adicionada de volta no array
+                //se item encontrado, adicionada de volta no array -
                 arrayListItens.add(item);
             }
         }
