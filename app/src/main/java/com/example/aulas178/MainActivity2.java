@@ -62,11 +62,14 @@ public class MainActivity2 extends AppCompatActivity {
             //este método é chamado ao digitar
             @Override
             public boolean onQueryTextChange(String s) {
+                //forma 1: utilizar filter pronto
+                    //MainActivity2.this.meuAdapter.getFilter().filter(s);
 
-                //método para atualizar itens do arraylist
-                fazerBusca(s);
-                //atualiza lista com arrayList alterado
-                meuAdapter.notifyDataSetChanged();
+                //forma 2: fazer a busca manualmente
+                    //método para atualizar itens do arraylist
+                    fazerBusca(s);
+                    //atualiza lista com arrayList alterado
+                    meuAdapter.notifyDataSetChanged();
 
                 return false;
             }
