@@ -62,10 +62,10 @@ public class MainActivity2 extends AppCompatActivity {
             //este método é chamado ao digitar
             @Override
             public boolean onQueryTextChange(String s) {
-                //forma 1: utilizar filter pronto
+                //forma 1: utilizar filter pronto (não busca letras dentro de palavras)
                     //MainActivity2.this.meuAdapter.getFilter().filter(s);
 
-                //forma 2: fazer a busca manualmente
+                //forma 2: fazer a busca manualmente (busca letras dentro de palavras)
                     //método para atualizar itens do arraylist
                     fazerBusca(s);
                     //atualiza lista com arrayList alterado
