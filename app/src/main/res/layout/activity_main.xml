@@ -30,6 +30,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextEmail"
+            android:text="eu@eu.com"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -50,6 +51,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextSenha"
             android:layout_width="match_parent"
+            android:text="12345678"
             android:layout_height="wrap_content"
             android:hint="Digite uma senha"
             android:inputType="textPassword" />
