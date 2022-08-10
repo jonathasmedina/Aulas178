@@ -39,12 +39,10 @@ public class MainActivity extends AppCompatActivity {
                             MainActivity2.class
                     );
                     startActivity(i);
+
                 }
 
-                Toast.makeText(getApplicationContext(),
-                        "O e-mail digitado foi: " + email +
-                                " e a senha digitada foi: " + senha,
-                        Toast.LENGTH_LONG).show();
+               // Toast.makeText(getApplicationContext(),"O e-mail digitado foi: " + email +" e a senha digitada foi: " + senha,Toast.LENGTH_LONG).show();
 
             }
         });
