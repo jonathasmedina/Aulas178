@@ -23,6 +23,23 @@ public class MainActivityRadioButton extends AppCompatActivity {
         radioGroup  = findViewById(R.id.radioGroup);
         bt  = findViewById(R.id.button);
 
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch (radioGroup.getCheckedRadioButtonId()){
+                    case R.id.radioButton1:
+                        Toast.makeText(getApplicationContext(), "Opção 1", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.radioButton2:
+                        Toast.makeText(getApplicationContext(), "Opção 2", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.radioButton3_:
+                        Toast.makeText(getApplicationContext(), "Opção 3", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+        });
+
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

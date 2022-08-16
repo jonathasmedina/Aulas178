@@ -23,13 +23,13 @@ public class MainActivityDialogo extends AppCompatActivity {
         btDiag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder janelaDiag = new AlertDialog.Builder(getApplicationContext());
-                janelaDiag.setTitle("Título");
-                janelaDiag.setMessage("Mensagem da janela");
-                janelaDiag.setPositiveButton("Ok", null);
-                janelaDiag.setNegativeButton("Cancelar", null);
-
-                janelaDiag.show();
+                AlertDialog.Builder janela = new AlertDialog.Builder(MainActivityDialogo.this);
+                janela.setTitle("Título");
+                janela.setMessage("Mensagem da janela");
+                //janela.setNeutralButton("Botão ok", null);
+                janela.setPositiveButton("Botão de ok", null);
+                janela.setNegativeButton("Botão de Cancelar", null);
+                janela.show();
             }
         });
     }

@@ -23,6 +23,14 @@ public class MainActivityCheckBox extends AppCompatActivity {
         checkBox_3 = findViewById(R.id.checkBox3);
         bt = findViewById(R.id.button1);
 
+        checkBox_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Checkbox 1 marcado", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
