@@ -36,7 +36,7 @@ public class MainActivity2 extends AppCompatActivity {
         arrayListItens.add("CheckBox");
         arrayListItens.add("RadioButton");
         arrayListItens.add("Janela de Diálogo");
-        arrayListItens.add("Item 4");
+        arrayListItens.add("Spinner");
         arrayListItens.add("Item 5");
 
         arrayListItensCopia = new ArrayList<>(arrayListItens);
@@ -74,6 +74,14 @@ public class MainActivity2 extends AppCompatActivity {
                     Intent intent = new Intent(
                             MainActivity2.this,
                             MainActivityDialogo.class
+                    );
+
+                    startActivity(intent);
+                }
+                if (i == 3) {
+                    Intent intent = new Intent(
+                            MainActivity2.this,
+                            MainActivitySpinner.class
                     );
 
                     startActivity(intent);
