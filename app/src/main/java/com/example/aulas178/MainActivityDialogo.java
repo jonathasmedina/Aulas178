@@ -29,7 +29,12 @@ public class MainActivityDialogo extends AppCompatActivity {
                 janela.setTitle("Título");
                 janela.setMessage("Mensagem da janela");
                 //janela.setNeutralButton("Botão ok", null);
-                janela.setPositiveButton("Botão de ok", null);
+                janela.setPositiveButton("Botão de ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //implementar - voltar para primeira tela
+                    }
+                });
                 janela.setNegativeButton("Botão de Cancelar", null);
                 janela.show();
             }
