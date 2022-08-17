@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Aulas178"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivityBotoes"
+            android:exported="false" />
+        <activity
             android:name=".MainActivitySpinner"
             android:exported="false" />
         <activity

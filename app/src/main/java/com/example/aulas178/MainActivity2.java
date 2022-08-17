@@ -37,7 +37,7 @@ public class MainActivity2 extends AppCompatActivity {
         arrayListItens.add("RadioButton");
         arrayListItens.add("Janela de Diálogo");
         arrayListItens.add("Spinner");
-        arrayListItens.add("Item 5");
+        arrayListItens.add("Calculadora 4 operações - 2 números");
 
         arrayListItensCopia = new ArrayList<>(arrayListItens);
 
@@ -86,6 +86,14 @@ public class MainActivity2 extends AppCompatActivity {
 
                     startActivity(intent);
                 }
+                if (i == 4) {
+                    Intent intent = new Intent(
+                            MainActivity2.this,
+                            MainActivityBotoes.class
+                    );
+
+                    startActivity(intent);
+                }
 
 
 
@@ -113,9 +121,9 @@ public class MainActivity2 extends AppCompatActivity {
 
                 //forma 2: fazer a busca manualmente (busca letras dentro de palavras)
                 //método para atualizar itens do arraylist
-                // fazerBusca(s);
+                 fazerBusca(s);
                 //atualiza lista com arrayList alterado
-                //meuAdapter.notifyDataSetChanged();
+                meuAdapter.notifyDataSetChanged();
 
                 return false;
             }
