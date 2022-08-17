@@ -22,7 +22,7 @@ public class MainActivityBotoes
         bt3 = findViewById(R.id.button3Acao);
         bt4 = findViewById(R.id.button4Acao);
 
-        //forma 1:
+        //forma 1: setOnClickListener com ouvinte instanciado
         /*bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,17 +32,17 @@ public class MainActivityBotoes
             }
         });*/
 
-        //forma 2:
+        //forma 2: setOnClickListener instanciando o ouvinte mais abaixo
         //bt2.setOnClickListener(mOuvinte);
 
-        //forma 4:
+        //forma 4: classe implementa a interface View.OnClickListener e o método onClick mais abaixo
         bt1.setOnClickListener(this);
         bt2.setOnClickListener(this);
         bt3.setOnClickListener(this);
         bt4.setOnClickListener(this);
     }
 
-    //forma 3:
+    //forma 3: função java sendo chamada do xml (propriedade onclick no button)
     /*public void funcao(View v){
         Toast.makeText(getApplicationContext(),
                 "Ação forma 3",
