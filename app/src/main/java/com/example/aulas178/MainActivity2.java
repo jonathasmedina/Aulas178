@@ -38,6 +38,7 @@ public class MainActivity2 extends AppCompatActivity {
         arrayListItens.add("Janela de Diálogo");
         arrayListItens.add("Spinner");
         arrayListItens.add("Calculadora 4 operações - 2 números");
+        arrayListItens.add("CalendarView e TimePicker");
 
         arrayListItensCopia = new ArrayList<>(arrayListItens);
 
@@ -90,6 +91,14 @@ public class MainActivity2 extends AppCompatActivity {
                     Intent intent = new Intent(
                             MainActivity2.this,
                             MainActivityBotoes.class
+                    );
+
+                    startActivity(intent);
+                }
+                if (i == 5) {
+                    Intent intent = new Intent(
+                            MainActivity2.this,
+                            MainActivityCalendarView.class
                     );
 
                     startActivity(intent);
