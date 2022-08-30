@@ -40,7 +40,7 @@ public class MainActivity2 extends AppCompatActivity {
         arrayListItens.add("Calculadora 4 operações - 2 números");
         arrayListItens.add("CalendarView e TimePicker");
         arrayListItens.add("Intent com conteúdo");
-        arrayListItens.add("Buttons");
+        arrayListItens.add("MaterialButton, ImageButton, FloatingActionButton, ScrollView");
 
         arrayListItensCopia = new ArrayList<>(arrayListItens);
 
