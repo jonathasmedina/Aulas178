@@ -39,13 +39,15 @@ public class MainActivity2 extends AppCompatActivity {
         arrayListItens.add("Spinner");
         arrayListItens.add("Calculadora 4 operações - 2 números");
         arrayListItens.add("CalendarView e TimePicker");
+        arrayListItens.add("Intent com conteúdo");
+        arrayListItens.add("Buttons");
 
         arrayListItensCopia = new ArrayList<>(arrayListItens);
 
         //adapter: vincular arrayList com a ListView
         meuAdapter = new ArrayAdapter<>(
                 this,
-                android.R.layout.simple_list_item_1,
+                R.layout.minha_lista,
                 arrayListItens
         );
 
@@ -100,6 +102,28 @@ public class MainActivity2 extends AppCompatActivity {
                             MainActivity2.this,
                             MainActivityCalendarView.class
                     );
+
+                    startActivity(intent);
+                }
+                if (i == 6) {
+                    Intent intent = new Intent(
+                            MainActivity2.this,
+                            MainActivityIntent.class
+                    );
+
+                    String nome = "IFMS";
+                    intent.putExtra("nome_", nome);
+
+                    startActivity(intent);
+                }
+                if (i == 7) {
+                    Intent intent = new Intent(
+                            MainActivity2.this,
+                            MainActivityButtons.class
+                    );
+
+                    String nome = "IFMS";
+                    intent.putExtra("nome_", nome);
 
                     startActivity(intent);
                 }

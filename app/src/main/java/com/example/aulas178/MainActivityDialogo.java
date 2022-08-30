@@ -28,6 +28,7 @@ public class MainActivityDialogo extends AppCompatActivity {
                 AlertDialog.Builder janela = new AlertDialog.Builder(MainActivityDialogo.this);
                 janela.setTitle("Título");
                 janela.setMessage("Mensagem da janela");
+                janela.setIcon(R.drawable.ic_eye);
                 //janela.setNeutralButton("Botão ok", null);
                 janela.setPositiveButton("Botão de ok", new DialogInterface.OnClickListener() {
                     @Override
