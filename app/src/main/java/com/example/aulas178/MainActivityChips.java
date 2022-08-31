@@ -1,6 +1,7 @@
 package com.example.aulas178;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,7 @@ import java.util.List;
 
 public class MainActivityChips extends AppCompatActivity {
 
-    Chip ch1;
+    Chip ch1, ch3;
     ChipGroup chipGroup;
     Button bt;
     TextView textView;
@@ -29,6 +30,7 @@ public class MainActivityChips extends AppCompatActivity {
         setContentView(R.layout.activity_main_chips);
 
         ch1 = findViewById(R.id.chip1);
+        ch3 = findViewById(R.id.chip3);
         chipGroup  = findViewById(R.id.chipGroup1);
         bt  = findViewById(R.id.buttonChip);
         textView  = findViewById(R.id.textViewChip);
@@ -65,6 +67,14 @@ public class MainActivityChips extends AppCompatActivity {
                    String texto = ch1.getText().toString();
                    //Toast.makeText(getApplicationContext(),texto + "OFF",Toast.LENGTH_SHORT).show();
                }
+            }
+        });
+
+        //fechando um chip do tipo Entry
+        ch3.setOnCloseIconClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                chipGroup.removeView(ch3);
             }
         });
 
