@@ -41,6 +41,8 @@ public class MainActivity2 extends AppCompatActivity {
         arrayListItens.add("CalendarView e TimePicker");
         arrayListItens.add("Intent com conteúdo");
         arrayListItens.add("MaterialButton, ImageButton, FloatingActionButton, ScrollView");
+        arrayListItens.add("Chips");
+
 
         arrayListItensCopia = new ArrayList<>(arrayListItens);
 
@@ -127,7 +129,13 @@ public class MainActivity2 extends AppCompatActivity {
 
                     startActivity(intent);
                 }
-
+                if (i == 8) {
+                    Intent intent = new Intent(
+                            MainActivity2.this,
+                            MainActivityChips.class
+                    );
+                    startActivity(intent);
+                }
 
 
             }
@@ -154,7 +162,7 @@ public class MainActivity2 extends AppCompatActivity {
 
                 //forma 2: fazer a busca manualmente (busca letras dentro de palavras)
                 //método para atualizar itens do arraylist
-                 fazerBusca(s);
+                fazerBusca(s);
                 //atualiza lista com arrayList alterado
                 meuAdapter.notifyDataSetChanged();
 
