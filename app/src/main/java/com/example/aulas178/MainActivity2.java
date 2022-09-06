@@ -42,6 +42,7 @@ public class MainActivity2 extends AppCompatActivity {
         arrayListItens.add("Intent com conteúdo");
         arrayListItens.add("MaterialButton, ImageButton, FloatingActionButton, ScrollView");
         arrayListItens.add("Chips");
+        arrayListItens.add("Barriers e Guidelines");
 
 
         arrayListItensCopia = new ArrayList<>(arrayListItens);
@@ -133,6 +134,13 @@ public class MainActivity2 extends AppCompatActivity {
                     Intent intent = new Intent(
                             MainActivity2.this,
                             MainActivityChips.class
+                    );
+                    startActivity(intent);
+                }
+                if (i == 9) {
+                    Intent intent = new Intent(
+                            MainActivity2.this,
+                            MainActivityBarrierEGuideline.class
                     );
                     startActivity(intent);
                 }
